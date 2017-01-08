@@ -4,7 +4,6 @@
 }*/
 $(function(){
 	slidenav();
-	
 });
 
 function slidenav(){
