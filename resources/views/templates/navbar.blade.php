@@ -7,9 +7,11 @@
 	<title>Vesperia</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
-
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/list-api.css') }}">
+	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{{ asset('/js/bootstrap.min.js') }}}"></script>
+    <script src="http://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="{{{ asset('/js/main.js') }}}"></script>
 </head>
 <body>
@@ -26,9 +28,10 @@
 					<div class="closebtn"></div>
 				</div>
 				<!--end mobile-->
+
 				<ul class="list-style visible-nav" id="link">
-					<li class="active">
-						<a href="" class="bullet"><span>Overview</span></a>
+					<li class="menu {{ Request::is('/') ? 'active' : '' }}">
+						<a href="/" class="bullet"><span>Overview</span></a>
 					</li>
 
 					<li >
@@ -39,16 +42,45 @@
 						<a href="" class="bullet"><span>Bill</span></a>
 					</li>
 
-					<li >
-						<a href="" class="bullet"><span>Airtime</span></a>
+					<li class="{{ Request::is('list-api') ? 'active' : '' }}">
+						<a href="/list-api" class="bullet-red"><span>Airtime</span></a>
 					</li>
 
 					<li >
 						<a href="" class="bullet"><span>Transfer</span></a>
 					</li>
 				</ul>
+				<div class="tambah-cat" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+					<h3><span>+</span> </h3>
+				</div>				
+			</div>
 
-				
+			<!--modal tambah category-->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+			          <div class="form-group">
+			            <label for="recipient-name" class="control-label">Recipient:</label>
+			            <input type="text" class="form-control" id="recipient-name">
+			          </div>
+			          <div class="form-group">
+			            <label for="message-text" class="control-label">Message:</label>
+			            <textarea class="form-control" id="message-text"></textarea>
+			          </div>
+			        </form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Send message</button>
+			      </div>
+			    </div>
+			  </div>
 			</div>
 
 			@yield('content')

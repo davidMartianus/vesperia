@@ -4,10 +4,6 @@ html,body{
 	height: 100%; 
 }
 
-.logo-admin{
-	
-}
-
 #side-menu{
 	background-color: #c5363a;
 	padding: 0;
@@ -32,10 +28,16 @@ html,body{
 	color: #39b54a;
 	margin-right: 10px;
 }
-.list-style > .active a.bullet:before{
+.list-style a.bullet-red:before{
+	content: "\2022";
+    font-size: 170%;
+	color: #ed1c24;
+	margin-right: 10px;
+}
+/*.list-style > .active a.bullet:before{
 	content: "";
 	margin-right: 0;
-}
+}*/
 #side-menu .active a{
 	background-color: #9d2629;
 	color: white;
@@ -43,7 +45,11 @@ html,body{
 	margin: 0;
 	border-left: 10px solid #8e191b;
 	border-bottom: none;
-	padding-left: 30px;
+	padding-left: 40px;
+}
+#side-menu .menu a:before{
+	content: "";
+	margin-right: 0px;
 }
 #side-menu a{
 	padding: 10px 40px 5px 40px; 
@@ -62,20 +68,23 @@ html,body{
 	display: block;
 }
 .mobile-nav{
+	display: none;	
+}
+.mobile-close{
 	display: none;
 }
 
 @media (max-width: 485px){
 	.mobile-nav{
 		display: block;
-		position: fixed;
 		margin: 10px;	
 	}
 	.visible-img{
 		display: none;
 	}
 	.mobile-close{
-		margin: 10px 10px 0;
+		display: block;
+		margin-right: 5px;
 	}
 	.visible-nav{
 		display: none;
@@ -167,7 +176,7 @@ html,body{
 	background-color: white;
 	box-shadow: 3px 3px 3px #888888;
 	padding: 0px 15px;
-	margin: 0 15px 20px;
+	margin: 20px 15px;
 	width: 250px;
 	height: 163px;
 	border-radius: 5px;
@@ -186,3 +195,19 @@ html,body{
 	font-size: 18px;
 	color: #868788;
 }	
+
+.tambah-cat span{
+	background-color: white;
+	color: #c5363a;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin: 0 auto;
+	border-radius: 50%;
+	box-shadow: 1px 1px 4px black;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

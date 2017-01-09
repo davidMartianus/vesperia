@@ -16,3 +16,7 @@
 Route::get('/', function () {
     return view('templates.overview');
 });
+
+Route::get('/list-api', function () {
+    return view('templates.list-api');
+});

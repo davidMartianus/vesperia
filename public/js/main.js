@@ -1,9 +1,6 @@
-/*function openNav(){
-	document.getElementById("link").setAttribute("style","display:block; z-index: 1;");
-	document.getElementById("hamburger").style.display = "none";
-}*/
 $(function(){
 	slidenav();
+	$('#myTable').DataTable();
 });
 
 function slidenav(){
