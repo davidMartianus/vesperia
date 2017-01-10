@@ -1,6 +1,7 @@
 $(function(){
 	slidenav();
-	$('#myTable').DataTable();
+	filter();
+	search();
 });
 
 function slidenav(){
@@ -20,4 +21,16 @@ function slidenav(){
 		$('.mobile-close').removeClass('btn btn-danger btn-lg pull-right');
 		$('.closebtn').removeClass('glyphicon glyphicon-remove');
 	});
+}
+
+function filter () {
+    $('#api-table').DataTable({
+    	"dom": '<<t>p>'
+    });
+}
+function search(){
+	var oTable = $('#api-table').DataTable();   //pay attention to capital D, which is mandatory to retrieve "api" datatables' object, as @Lionel said
+	$('#filter').keyup(function(){
+	      oTable.search($(this).val()).draw() ;
+	})
 }

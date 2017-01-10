@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/list-api', function () {
     return view('templates.list-api');
 });
+
+Route::get('/user-table', function () {
+    return view('templates.user');
+});
