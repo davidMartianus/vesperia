@@ -9,11 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/list-api.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/user.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/parsley.css') }}">
 	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{{ asset('/js/bootstrap.min.js') }}}"></script>
     <script src="http://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="{{{ asset('/js/main.js') }}}"></script>
+    <script src="{{{ asset('/js/parsley.min.js') }}}"></script>
 </head>
 <body>
 	<div class="container-fluid display-table">

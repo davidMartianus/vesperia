@@ -10,18 +10,20 @@
 	        </div>
 		</div>
 		<div class="col-md-3">
-			<div class="tambah" data-toggle="modal" data-target="#tambahApiModal" data-whatever="@mdo">
+			<div class="tambah" data-toggle="modal" data-target="#userModal" id="add-btn-user" data-whatever="@mdo">
 				<h3>Tambah User <span>+</span> </h3>
 			</div>
-			<div class="modal fade" id="tambahApiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+
+			<!-- modal add/edituser -->
+			<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="exampleModalLabel">Tambah User</h4>
+			        <h4 class="modal-title" id="modalLabel"></h4>
 			      </div>
 			      <div class="modal-body">
-			        <form>
+			        <form id="form" data-parsley-validate>
 			          <div class="form-group">
 			            <label for="category-name" class="control-label">Role:</label>
 			            <select type="text" class="form-control" id="recipient-name">
@@ -31,25 +33,44 @@
 			          </div>
 			          <div class="form-group">
 			          	<label for="url-name" class="control-label">Nama:</label>
-			            <input type="text" class="form-control" id="recipient-name">            	
+			            <input type="text" class="form-control" id="recipient-name" required="" data-parsley-required="true">            	
 			          </div>
   			          <div class="form-group">
 			          	<label for="url-name" class="control-label">e-mail:</label>
-			            <input type="text" class="form-control" id="recipient-name">            	
+			            <input type="text" class="form-control" id="recipient-name" required="" data-parsley-required="true" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">	
 			          </div>
 			          <div class="form-group">
 			          	<label for="url-name" class="control-label">Phone Number:</label>
-			            <input type="text" class="form-control" id="recipient-name">            	
+			            <input type="text" class="form-control" id="recipient-name" required="" data-parsley-required="true">            	
 			          </div>
   			          <div class="form-group">
 			          	<label for="url-name" class="control-label">Password:</label>
-			            <input type="text" class="form-control" id="recipient-name">            	
+			            <input type="password" class="form-control" id="recipient-name" required="" data-parsley-required="true">            	
 			          </div>
 			        </form>
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="button" class="btn btn-primary">Add</button>
+			        <button type="submit" class="btn btn-primary" id="modalSubmit"></button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- modal delete -->
+			<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="modalLabel"></h4>
+			      </div>
+			      <div class="modal-body">
+			          <h2 class="text-center">Are you sure want to delete this?</h2>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary">Yes</button>
+			        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
 			      </div>
 			    </div>
 			  </div>
@@ -69,28 +90,28 @@
     </thead>
     <tbody>
         <tr>
-            <td> Patrick </td>
-            <td> patrick@gmail.com </td>
-            <td> 0857123456 </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit">Edit</button><button class="btn btn-danger act-del">Delete</button></td>
+            <td id="uname"> Patrick </td>
+            <td id="umail"> patrick@gmail.com </td>
+            <td id="uphone"> 0857123456 </td>
+            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
         </tr>
         <tr>
-            <td> Patrick </td>
-            <td> patrick@gmail.com </td>
-            <td> 0857123456 </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit">Edit</button><button class="btn btn-danger act-del">Delete</button></td>
+            <td> Thomas </td>
+            <td> thomas@gmail.com </td>
+            <td> 0857123457 </td>
+            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
         </tr>
         <tr>
-            <td> Patrick </td>
-            <td> patrick@gmail.com </td>
-            <td> 0857123456 </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit">Edit</button><button class="btn btn-danger act-del">Delete</button></td>
+            <td> Woof </td>
+            <td> woof@gmail.com </td>
+            <td> 0857123458 </td>
+            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
         </tr>
         <tr>
-            <td> Patrick </td>
-            <td> patrick@gmail.com </td>
-            <td> 0857123456 </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit">Edit</button><button class="btn btn-danger act-del">Delete</button></td>
+            <td> Kenny </td>
+            <td> kenny@gmail.com </td>
+            <td> 0857123459 </td>
+            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
         </tr>
     </tbody>
 </table>

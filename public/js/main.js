@@ -2,6 +2,9 @@ $(function(){
 	slidenav();
 	filter();
 	search();
+	toggleModal();
+	apiBtn();
+	$('#form').parsley();
 });
 
 function slidenav(){
@@ -33,4 +36,41 @@ function search(){
 	$('#filter').keyup(function(){
 	      oTable.search($(this).val()).draw() ;
 	})
+}
+
+function toggleModal(){
+	$('#add-btn-user').on('click', function(e){
+		e.preventDefault();
+		// var title = $(this).data('title');
+		$("#modalLabel").text('Add User');
+		$("#userModal button[type=submit]").text('Add');
+	});
+
+
+	$('#edit-btn-user').on('click', function(e){
+		e.preventDefault();
+		// var title = $(this).data('title');
+		$("#modalLabel").text('Edit User');
+		$("#userModal button[type=submit]").text('Update');
+	});
+}
+
+function apiBtn(){
+	$('.btn-api').data('clickCounts', 1).click(function() {
+	  var $this = $(this);
+	  var $clickCounts = $this.data('clickCounts')
+	  if ($clickCounts === 1) {
+	    $this.addClass('bg-act-red');
+	    $clickCounts += 1;
+	  } else if ($clickCounts == 2) {
+	    $this.addClass('bg-act-yellow');
+	    $this.text('Change to Done');
+	    $clickCounts += 1;
+	  } else if ($clickCounts == 3) {
+	    $this.addClass('bg-act-green');
+	    $this.text('Solved');
+	    $clickCounts += 1;
+	  }  
+	  $this.data('clickCounts', $clickCounts);
+	});
 }
