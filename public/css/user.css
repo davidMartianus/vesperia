@@ -32,17 +32,16 @@
 	overflow: hidden;
 	margin: 0 20px 0 10px;
 }
-.table thead{
-	overflow: hidden;
-	background: #c5363a;
-
+.tbl-user{
+	
 }
+
 .table th{
 	color: white;
 	text-align: center;
 }
 
-td.bullet:after{
+/*td.bullet:after{
 	content: "\2022";
     font-size: 170%;
 	color: #39b54a;
@@ -51,10 +50,10 @@ td.bullet:after{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
+}*/
 .btn-user{
 	text-align: center;
-	width: 220px;
+	/*width: 220px;*/
 }
 .act-edit{
 	font-size: 12px;

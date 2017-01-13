@@ -26,6 +26,9 @@
 	box-shadow: 1px 1px 4px black;
 	cursor: pointer;
 }
+.api{
+	word-wrap: break-word;
+}
 .table{
 	background-color: white;
 	border-radius: 10px;
@@ -35,14 +38,14 @@
 .table thead{
 	overflow: hidden;
 	background: #c5363a;
-
 }
 .table th{
 	color: white;
 	text-align: center;
+	font-size: .85em;
 }
 
-td.bullet:after{
+/*td.bullet:after{
 	content: "\2022";
     font-size: 170%;
 	color: #39b54a;
@@ -51,7 +54,7 @@ td.bullet:after{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
+}*/
 .glyphicon-chevron-right{
 	 margin-bottom: 3px;
 }
@@ -108,4 +111,59 @@ textarea.form-param{
 }
 textarea.form-sign{
 	height: 270px;
+}
+
+@media (max-width: 820px){
+	table {
+	    border: 0;
+	}
+	table caption {
+	    font-size: 1.3em;
+	}
+	table thead {
+	    border: none;
+	    clip: rect(0 0 0 0);
+	    height: 1px;
+	    margin: -1px;
+	    overflow: hidden;
+	    padding: 0;
+	    position: absolute;
+	    width: 1px;
+	}
+	table tr {
+	    border-bottom: 0px solid #ddd;
+	    display: block;
+	    margin-bottom: .0em;
+	}
+	table td {
+	    border-bottom: 1px solid #ddd;
+	    display: block;
+	    font-size: .8em;
+	    text-align: right;
+	}	
+	table td:before {
+	    content: attr(data-label);
+	    float: left;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	}
+	table td:last-child {
+	    border-bottom: 0;
+	}
+	span.act-read{
+	  	margin-right: 0;
+	}
+	span.btn-api{
+	 	margin-right: 0;
+	}
+	td.btn-user{
+	  	height: 32px;
+	  	width: inherit;
+	}
+	#btn{
+		float: right;
+	}	
+	.tambah{
+		text-align: center;
+	}
 }

@@ -2,7 +2,6 @@ $(function(){
 	slidenav();
 	filter();
 	search();
-	//toggleModal();
 	apiBtn();
 	$('#form').parsley();
 	btnParameter();
@@ -249,7 +248,7 @@ function btnEdit(){
 	$('#edit-btn-user').click(function(){            
             $("#modalLabel").text('Edit User');
             $('.actionButton').addClass('edit');	        
-	        $('#modalEdit').html("Update");
+	        $('#modalSubmit').html("Update");
             $('#userModal').modal('show');
     });  
 }

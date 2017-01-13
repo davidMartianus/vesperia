@@ -4,12 +4,12 @@
 	<h3 class="judul">Daftar User:</h3>
 	
 	<div class="row head-title">
-		<div class="col-md-9">
+		<div class="col-xs-11 col-md-9">
 			<div class="form-group">
 	          <input type="text" class="form-control cari filter" id="filter" placeholder="Search here">
 	        </div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-xs-5 col-md-3">
 			<div class="tambah" data-toggle="modal" id="add-btn-user" data-whatever="@mdo">
 				<h3>Tambah User <span>+</span> </h3>
 			</div>
@@ -53,7 +53,7 @@
 			            <input type="password" class="form-control" id="password" name="password" required data-parsley-required="true">            	
 
 			            <label for="url-name" class="control-label">Confirm Password:</label>
-			            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required data-parsley-required="true"> 
+			            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword"> 
 			          </div>
 
 				      <div class="modal-footer">
@@ -68,7 +68,7 @@
 			  </div>
 			</div>
 			<!-- end modal add -->
-			
+
 			<!-- modal delete -->
 			<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
 			  <div class="modal-dialog" role="document">
@@ -90,46 +90,52 @@
 			</div>
 		</div>
 	</div>
-
-	<table id="api-table" class="display table table-bordered" cellspacing="0" width="100%">
-    <thead>
-        <tr>
-        	<th>Id</th>
-            <th>Nama</th>
-            <th>email</th>
-            <th>Phone Number</th>
-            <th>Role</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>    	
-        <tr>
-        	<td id="uid"> 1 </td>
-            <td id="uname"> Patrick </td>
-            <td id="umail"> patrick@gmail.com </td>
-            <td id="uphone"> 085712345 </td>
-            <td id="urole"> User </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user">Edit</button><button class="btn btn-danger act-del" id="del-btn-user">Delete</button></td>
-        </tr>        
-        <!-- <tr>
-            <td> Thomas </td>
-            <td> thomas@gmail.com </td>
-            <td> 0857123457 </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
-        </tr>
-        <tr>
-            <td> Woof </td>
-            <td> woof@gmail.com </td>
-            <td> 0857123458 </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
-        </tr>
-        <tr>
-            <td> Kenny </td>
-            <td> kenny@gmail.com </td>
-            <td> 0857123459 </td>
-            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
-        </tr> -->
-    </tbody>
-</table>
+	<!-- <div class="responsive-table"> -->
+		<table id="api-table" class="tbl-user table table-bordered responsive-table" cellspacing="0" width="100%">
+		    <thead>
+		        <tr id="headrow">
+		        	<th scope="col">Id</th>
+		            <th scope="col">Nama</th>
+		            <th scope="col">Email</th>
+		            <th scope="col">Phone Number</th>
+		            <th scope="col">Role</th>
+		            <th scope="col">Action</th>
+		        </tr>
+		    </thead>
+		    <tbody>    	
+		        <tr>
+		        	<td id="uid" scope="row" data-label="Id"> 1 </td>
+		            <td id="uname" data-label="Nama"> Patrick </td>
+		            <td id="umail" data-label="Email"> patrick@gmail.com </td>
+		            <td id="uphone" data-label="Phone Number"> 085712345 </td>
+		            <td id="urole" data-label="Role"> User </td>
+		            <td class="btn-user" data-label="Action">
+			            <div id="btn">
+				            <button class="btn btn-primary act-edit" id="edit-btn-user">Edit</button>
+				            <button class="btn btn-danger act-del" id="del-btn-user">Delete</button>
+			            </div>
+		            </td>
+		        </tr>        
+		        <!-- <tr>
+		            <td> Thomas </td>
+		            <td> thomas@gmail.com </td>
+		            <td> 0857123457 </td>
+		            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
+		        </tr>
+		        <tr>
+		            <td> Woof </td>
+		            <td> woof@gmail.com </td>
+		            <td> 0857123458 </td>
+		            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
+		        </tr>
+		        <tr>
+		            <td> Kenny </td>
+		            <td> kenny@gmail.com </td>
+		            <td> 0857123459 </td>
+		            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
+		        </tr> -->
+		    </tbody>
+		</table>
+	<!-- </div> -->
 </div>
 @endsection
