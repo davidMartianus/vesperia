@@ -90,7 +90,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="responsive-table"> -->
+
 		<table id="api-table" class="tbl-user table table-bordered responsive-table" cellspacing="0" width="100%">
 		    <thead>
 		        <tr id="headrow">
@@ -115,27 +115,38 @@
 				            <button class="btn btn-danger act-del" id="del-btn-user">Delete</button>
 			            </div>
 		            </td>
-		        </tr>        
-		        <!-- <tr>
-		            <td> Thomas </td>
-		            <td> thomas@gmail.com </td>
-		            <td> 0857123457 </td>
-		            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
-		        </tr>
+		        </tr>    
+
 		        <tr>
-		            <td> Woof </td>
-		            <td> woof@gmail.com </td>
-		            <td> 0857123458 </td>
-		            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
+		        	<td id="uid" scope="row" data-label="Id"> 2 </td>
+		            <td id="uname" data-label="Nama"> Woof </td>
+		            <td id="umail" data-label="Email"> woofk@gmail.com </td>
+		            <td id="uphone" data-label="Phone Number"> 085711245 </td>
+		            <td id="urole" data-label="Role"> User </td>
+		            <td class="btn-user" data-label="Action">
+			            <div id="btn">
+				            <button class="btn btn-primary act-edit" id="edit-btn-user">Edit</button>
+				            <button class="btn btn-danger act-del" id="del-btn-user">Delete</button>
+			            </div>
+		            </td>
 		        </tr>
+
 		        <tr>
-		            <td> Kenny </td>
-		            <td> kenny@gmail.com </td>
-		            <td> 0857123459 </td>
-		            <td class="btn-user"><button class="btn btn-primary act-edit" id="edit-btn-user" data-toggle="modal" data-target="#userModal">Edit</button><button class="btn btn-danger act-del" data-toggle="modal" data-target="#delModal">Delete</button></td>
-		        </tr> -->
+		        	<td id="uid" scope="row" data-label="Id"> 3 </td>
+		            <td id="uname" data-label="Nama"> Kitty </td>
+		            <td id="umail" data-label="Email"> kitty@gmail.com </td>
+		            <td id="uphone" data-label="Phone Number"> 085722335 </td>
+		            <td id="urole" data-label="Role"> User </td>
+		            <td class="btn-user" data-label="Action">
+			            <div id="btn">
+				            <button class="btn btn-primary act-edit" id="edit-btn-user">Edit</button>
+				            <button class="btn btn-danger act-del" id="del-btn-user">Delete</button>
+			            </div>
+		            </td>
+		        </tr>    
+		        
 		    </tbody>
 		</table>
-	<!-- </div> -->
+	
 </div>
 @endsection

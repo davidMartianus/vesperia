@@ -34,7 +34,7 @@ function slidenav(){
 
 function filter () {
     $('#api-table').DataTable({
-    	"dom": '<<t>p>'
+    	"dom": '<<t>ip>'
     });
 }
 function search(){

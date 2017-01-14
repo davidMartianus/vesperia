@@ -11,7 +11,7 @@
 		</div>
 	</div>
 
-	<table id="api-table" class="display table table-bordered responsive-table" cellspacing="0" width="100%">
+	<table id="api-table" class="table table-bordered responsive-table" cellspacing="0" width="100%">
         <thead>
             <tr id="headrow">
                 <th scope="col">Id</th>
@@ -38,40 +38,36 @@
                 <td data-label="Action">
                     <span class="btn-api act-red"> Change to on Proccess </span>
                 </td>
-            <!-- </tr>
-            <tr>
-                <td> 2 </td>
-                <td> https://mapi.dompetku.com/belipulsaindosat </td>
-                <td> 123447892 </td>
-                <td> Ipsum </td>
-                <td><span class="act-read btn-sign" data-toggle="modal" data-target=".modal-signature"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
-                <td><span class="act-read btn-param" data-toggle="modal" data-target=".modal-parameter"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
-                <td> 24/12/12 7:57:02 </td>
-                <td> 24/12/12 8:57:02 </td>
-                <td><span class="btn-api act-red"> Change to on Proccess </span></td>
             </tr>
+
             <tr>
-                <td> 3 </td>
-                <td> https://mapi.dompetku.com/belipulsaxl </td>
-                <td> 213456897 </td>
-                <td> Ipsum </td>
-                <td><span class="act-read btn-sign" data-toggle="modal" data-target=".modal-signature"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
-                <td><span class="act-read btn-param" data-toggle="modal" data-target=".modal-parameter"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
-                <td> 24/12/12 7:57:02 </td>
-                <td> 24/12/12 8:57:02 </td>
-                <td><span class="btn-api act-red"> Change to on Proccess </span></td>
+                <td scope="row" data-label="Id"> 2 </td>
+                <td data-label="URL HIT API"> https://mapi.dompetku.com/belipulsaxl </td>
+                <td data-label="trx_id"> 22334455 </td>
+                <td data-label="ext ref"> Ipsum </td>
+                <td data-label="Signature"><span class="act-read btn-sign" data-toggle="modal" data-target=".modal-signature"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
+                <td data-label="Parameter"><span class="act-read btn-param" data-toggle="modal" data-target=".modal-parameter"> Read <i class="glyphicon glyphicon-chevron-right"></i> </span></td>
+                <td data-label="Created at"> 24/12/12 7:57:02 </td>
+                <td data-label="Updated at"> 24/12/12 8:57:02 </td>
+                <td data-label="Action">
+                    <span class="btn-api act-red"> Change to on Proccess </span>
+                </td>
             </tr>
+
             <tr>
-                <td> 4 </td>
-                <td> https://mapi.dompetku.com/belipulsaindosat </td>
-                <td> 54698732 </td>
-                <td> Ipsum </td>
-                <td><span class="act-read btn-sign" data-toggle="modal" data-target=".modal-signature"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
-                <td><span class="act-read btn-param" data-toggle="modal" data-target=".modal-parameter"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
-                <td> 24/12/12 7:57:02 </td>
-                <td> 24/12/12 8:57:02 </td>
-                <td><span class="btn-api act-red"> Change to on Proccess </span></td>
-            </tr> -->
+                <td scope="row" data-label="Id"> 3 </td>
+                <td data-label="URL HIT API"> https://mapi.dompetku.com/belipulsaaxis </td>
+                <td data-label="trx_id"> 52413330 </td>
+                <td data-label="ext ref"> Ipsum </td>
+                <td data-label="Signature"><span class="act-read btn-sign" data-toggle="modal" data-target=".modal-signature"> Read <i class="glyphicon glyphicon-chevron-right"></i></span></td>
+                <td data-label="Parameter"><span class="act-read btn-param" data-toggle="modal" data-target=".modal-parameter"> Read <i class="glyphicon glyphicon-chevron-right"></i> </span></td>
+                <td data-label="Created at"> 24/12/12 7:57:02 </td>
+                <td data-label="Updated at"> 24/12/12 8:57:02 </td>
+                <td data-label="Action">
+                    <span class="btn-api act-red"> Change to on Proccess </span>
+                </td>
+            </tr>
+            
         </tbody>
     </table>
 

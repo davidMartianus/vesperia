@@ -30,10 +30,13 @@
 	word-wrap: break-word;
 }
 .table{
-	background-color: white;
+	background-color: transparent;
 	border-radius: 10px;
 	overflow: hidden;
 	margin: 0 20px 0 10px;
+}
+.table.dataTable{
+	border-collapse: collapse;
 }
 .table thead{
 	overflow: hidden;
@@ -116,10 +119,7 @@ textarea.form-sign{
 @media (max-width: 820px){
 	table {
 	    border: 0;
-	}
-	table caption {
-	    font-size: 1.3em;
-	}
+	}	
 	table thead {
 	    border: none;
 	    clip: rect(0 0 0 0);
@@ -130,17 +130,17 @@ textarea.form-sign{
 	    position: absolute;
 	    width: 1px;
 	}
-	table tr {
+	table tbody tr {
 	    border-bottom: 0px solid #ddd;
 	    display: block;
-	    margin-bottom: .0em;
+	    margin-bottom: .5em;
 	}
 	table td {
 	    border-bottom: 1px solid #ddd;
 	    display: block;
 	    font-size: .8em;
 	    text-align: right;
-	}	
+	}
 	table td:before {
 	    content: attr(data-label);
 	    float: left;
