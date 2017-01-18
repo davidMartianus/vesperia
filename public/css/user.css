@@ -1,6 +1,6 @@
-.alt-style{
+/*.alt-style{
 	padding-top: 50px;
-}
+}*/
 .judul{
 	padding-left: 10px;
 	color: #868788;
@@ -11,11 +11,28 @@
 .cari{
 	width: 495px;
 	border-radius: 50px;
-	margin: 20px 10px 0 ;
+	margin: 20px 10px 0 ;	
 }
 .tambah{
 	color: #868788;
 }
+.tambah h3{
+	font-size: 22px;
+	margin: 20px auto 10px;
+}
+@media (min-width: 821px) and (max-width: 1051px ){
+	.tambah h3{
+		font-size: 19px;
+		margin-top: 25px;
+	}
+	.tambah-text{
+		text-align: center;
+	}
+	.cari{
+		width: 100%;
+	}
+}
+
 .tambah span{
 	background-color: #c5363a;
 	color: white;

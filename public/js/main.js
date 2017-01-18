@@ -14,19 +14,22 @@ $(function(){
 });
 
 function slidenav(){
-	$('.mobile-nav').click(function(){
+	$('.mobile-nav').click(function(){		
 		$('.logo-admin').removeClass('visible-img');
 		$('.list-style').removeClass('visible-nav');
 		$('.mobile-nav').removeClass('btn btn-danger btn-lg');
 		$('.hamburger').removeClass('glyphicon glyphicon-menu-hamburger');
+		// $('.display-table-cell').addClass('click-nav');
+		$('.side-menu').css('width','170px');
 		$('.mobile-close').addClass('btn btn-danger btn-lg pull-right');
-		$('.closebtn').addClass('glyphicon glyphicon-remove');
+		$('.closebtn').addClass('glyphicon glyphicon-remove');		
 	});
 	$('.mobile-close').click(function(){
 		$('.logo-admin').addClass('visible-img');
 		$('.list-style').addClass('visible-nav');
 		$('.mobile-nav').addClass('btn btn-danger btn-lg');
 		$('.hamburger').addClass('glyphicon glyphicon-menu-hamburger');
+		$('.side-menu').css('width','70px');
 		$('.mobile-close').removeClass('btn btn-danger btn-lg pull-right');
 		$('.closebtn').removeClass('glyphicon glyphicon-remove');
 	});
@@ -118,12 +121,12 @@ function ajaxCrud(){
 
 function submit(){
 	//open modal add
-	$('#add-btn-user').click(function(){
-		$("#modalLabel").text('Add User');
-        $('#modalSubmit').val("add");
-        $('#modalSubmit').html("Add");
-        $('#userModal').modal('show');
-    });
+	// $('#add-btn-user').click(function(){
+	// 	$("#modalLabel").text('Add User');
+ //        $('#modalSubmit').val("add");
+ //        $('#modalSubmit').html("Add");
+ //        $('#userModal').modal('show');
+ //    });
 
 	var form = $('#modal-form');
 	
@@ -198,7 +201,7 @@ function submit(){
 			.done(function(response){
 				$('.modal').modal('hide');
 				$('.body').append('<div class="alert alert-success alert-dismissible fade in" role="alert">\
-										<strong>You have successfuly add new user.</strong>\
+										<strong>Success</strong>\
 									</div>');
 				$('.alert').fadeOut(2000);
 				setTimeout(function(){
@@ -208,7 +211,7 @@ function submit(){
 			.fail(function(data){
 				$('.modal').modal('hide');
 				$('.body').append('<div class="alert alert-danger alert-dismissible fade in" role="alert">\
-										<strong>Failed to add user.</strong>\
+										<strong>Failed</strong>\
 									</div>');
 				setTimeout(function(){
 					$('.alert').remove();
@@ -220,11 +223,11 @@ function submit(){
 
 function confDelete(){
 	 //open modal delete
-    $('#del-btn-user').click(function(){
-        $('.did').text($(this).data('id'));
-		$('.dname').html($(this).data('nama'));
-        $('#delModal').modal('show');
-    });
+  //   $('#del-btn-user').click(function(){
+  //       $('.did').text($(this).data('id'));
+		// $('.dname').html($(this).data('nama'));
+  //       $('#delModal').modal('show');
+  //   });
 
     $('.delete').click(function(){
     	var proccedDel = true;
@@ -245,10 +248,10 @@ function confDelete(){
 }
 
 function btnEdit(){
-	$('#edit-btn-user').click(function(){            
-            $("#modalLabel").text('Edit User');
-            $('.actionButton').addClass('edit');	        
-	        $('#modalSubmit').html("Update");
-            $('#userModal').modal('show');
-    });  
+	// $('#edit-btn-user').click(function(){            
+ //            $("#modalLabel").text('Edit User');
+ //            $('.actionButton').addClass('edit');	        
+	//         $('#modalSubmit').html("Update");
+ //            $('#userModal').modal('show');
+ //    });  
 }

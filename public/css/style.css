@@ -4,19 +4,38 @@ html,body{
 	height: 100%; 
 }
 
-#side-menu{
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+.side-menu{
 	background-color: #c5363a;
 	padding: 0;
-	min-width: 75px;
+	min-width: 192px;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 }
 
-#side-menu ul{
+.side-menu ul li a{
+	min-height: 50px;
+	line-height: 50px;
+	position: relative;
+}
+
+.side-menu ul{
 	padding: 0;
 	margin-top: 60px;
-	list-style: none;
+	list-style: none;	
 }
 
-#side-menu li{
+.side-menu li{
 	margin: 0;
 	padding: 0;
 	display:inline;
@@ -38,7 +57,7 @@ html,body{
 	content: "";
 	margin-right: 0;
 }*/
-#side-menu .active a{
+.side-menu .active a{
 	background-color: #9d2629;
 	color: white;
 	display: block;	
@@ -47,11 +66,11 @@ html,body{
 	border-bottom: none;
 	padding-left: 40px;
 }
-#side-menu .menu a:before{
+.side-menu .menu a:before{
 	content: "";
 	margin-right: 0px;
 }
-#side-menu a{
+.side-menu a{
 	padding: 10px 40px 5px 40px; 
 	text-decoration: none;
 	color: white;
@@ -63,7 +82,7 @@ html,body{
 	border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-#side-menu a:hover{
+.side-menu a:hover{
 	color: #ddd;
 	display: block;
 }
@@ -74,7 +93,23 @@ html,body{
 	display: none;
 }
 
-@media (max-width: 720px){
+@media (max-width: 575px){
+	.side-menu{
+		min-width: 70px;
+	}
+	.click-nav{
+		background-color: #c5363a;
+		padding: 0;
+		min-width: 192px;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+	}
+	.page{
+		padding-left: 80px !important;
+	}
 	.mobile-nav{
 		display: block;
 		margin: 10px;	
@@ -104,7 +139,7 @@ html,body{
 }
 
 .display-table-cell{
-	display: table-cell;
+	/*display: table-cell;*/
 	float: none;
 	height: 100%;
 }
@@ -117,7 +152,7 @@ html,body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 70px auto 0px;
+	margin: 30px auto 0px;
 }
 
 .button-1{
@@ -135,7 +170,7 @@ html,body{
 		flex-direction: column;
 	}
 	.button-1 h2{
-		font-size: 3vw; 
+		font-size: 3vw;
 	}
 }
 

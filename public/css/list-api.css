@@ -1,5 +1,12 @@
+.page{
+	position: relative;
+	padding-left: 227px;
+}
 .alt-style{
-	padding-top: 50px;
+	width: 100%;
+	/*max-width: 840px;*/
+	margin: 0 auto;
+	padding: 50px 20px;
 }
 .judul{
 	padding-left: 10px;
