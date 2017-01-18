@@ -20,7 +20,7 @@
 <body>
 	<div class="container-fluid display-table">
 		<div class="row display-table-row">
-			<div class="col-xs-2 col-md-2 display-table-cell valign-top side-menu" id="">
+			<div class="col-xs-2 col-md-2 display-table-cell valign-top side-menu">
 				<img src="{{ asset('/img/logo.png') }}" class="img-responsive logo-admin visible-img">
 
 				<!--mobile-->

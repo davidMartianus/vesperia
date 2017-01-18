@@ -15,18 +15,20 @@ html,body{
 .side-menu{
 	background-color: #c5363a;
 	padding: 0;
-	min-width: 192px;
+	min-width: 227px;
 	position: fixed;
 	z-index: 100;
 	top: 0;
 	left: 0;
 	overflow: hidden;
+	transition: 0.5s;
 }
 
 .side-menu ul li a{
 	min-height: 50px;
-	line-height: 50px;
+	line-height: 30px;
 	position: relative;
+	transition: 0.3s;
 }
 
 .side-menu ul{
@@ -96,8 +98,9 @@ html,body{
 @media (max-width: 575px){
 	.side-menu{
 		min-width: 70px;
+		width: 70px;
 	}
-	.click-nav{
+	/*.click-nav{
 		background-color: #c5363a;
 		padding: 0;
 		min-width: 192px;
@@ -106,7 +109,7 @@ html,body{
 		top: 0;
 		left: 0;
 		overflow: hidden;
-	}
+	}*/
 	.page{
 		padding-left: 80px !important;
 	}

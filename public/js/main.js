@@ -19,8 +19,8 @@ function slidenav(){
 		$('.list-style').removeClass('visible-nav');
 		$('.mobile-nav').removeClass('btn btn-danger btn-lg');
 		$('.hamburger').removeClass('glyphicon glyphicon-menu-hamburger');
-		// $('.display-table-cell').addClass('click-nav');
-		$('.side-menu').css('width','170px');
+		// $('.alt-style').css('margin-left','80px');
+		$('.side-menu').css('width','227px');
 		$('.mobile-close').addClass('btn btn-danger btn-lg pull-right');
 		$('.closebtn').addClass('glyphicon glyphicon-remove');		
 	});
@@ -29,6 +29,7 @@ function slidenav(){
 		$('.list-style').addClass('visible-nav');
 		$('.mobile-nav').addClass('btn btn-danger btn-lg');
 		$('.hamburger').addClass('glyphicon glyphicon-menu-hamburger');
+		// $('.alt-style').css('margin-left','0px');
 		$('.side-menu').css('width','70px');
 		$('.mobile-close').removeClass('btn btn-danger btn-lg pull-right');
 		$('.closebtn').removeClass('glyphicon glyphicon-remove');
